@@ -1,0 +1,12 @@
+{
+  "qweather_api_key": {
+    "type": "string",
+    "description": "和风天气 API Key（可选，推荐）。填写后优先使用和风天气（数据最全）；留空则使用中国天气网（零 Key，国内直连）。",
+    "default": ""
+  },
+  "default_city": {
+    "type": "string",
+    "description": "默认城市（可选），如：北京。发送 /天气 不带城市名时使用。",
+    "default": ""
+  }
+}

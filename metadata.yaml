@@ -1,0 +1,8 @@
+name: astrbot_plugin_weather
+display_name: 天气查询
+desc: 天气查询插件：支持 /天气 命令和 AI 工具调用，实时天气 + 今日预报（中国天气网零Key / 和风天气 / Open-Meteo 多数据源）
+short_desc: 天气查询（/天气 城市，AI 可自动调用）
+help: 发送 /天气 城市 查询天气；或直接问 AI "北京天气怎么样"
+version: 1.1.1
+author: xiaowan138
+repo: https://github.com/xiaowan138/astrbot_plugin_weather
