@@ -4,9 +4,14 @@
     "description": "和风天气 API Key（可选，推荐）。填写后优先使用和风天气（数据最全）；留空则使用中国天气网（零 Key，国内直连）。",
     "default": ""
   },
+  "qweather_api_host": {
+    "type": "string",
+    "description": "和风天气专属 API Host（可选）。2024 年后新注册的和风用户必须填写控制台分配的专属 Host（形如 abc123.qweatherapi.com，只填域名即可）；老用户可留空。官方公告：公共地址 devapi/geoapi.qweather.com 自 2026 年起逐步停服，建议尽早填写。",
+    "default": ""
+  },
   "default_city": {
     "type": "string",
-    "description": "默认城市（可选），如：北京。发送 /天气 不带城市名时使用。",
+    "description": "默认城市（可选），如：北京。发送 /天气 不带城市名时使用（AI 工具调用未指定城市时也会使用）。",
     "default": ""
   }
 }

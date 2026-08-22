@@ -1,4 +1,5 @@
 {
   "qweather_api_key": "",
+  "qweather_api_host": "",
   "default_city": ""
 }
