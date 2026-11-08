@@ -1,5 +1,9 @@
 {
   "qweather_api_key": "",
   "qweather_api_host": "",
-  "default_city": ""
+  "default_city": "",
+  "image_card": true,
+  "interactive_choice": true,
+  "push_time_default": "07:30",
+  "timezone": ""
 }

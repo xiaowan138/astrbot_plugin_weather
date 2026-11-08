@@ -6,12 +6,36 @@
   },
   "qweather_api_host": {
     "type": "string",
-    "description": "和风天气专属 API Host（可选）。2024 年后新注册的和风用户必须填写控制台分配的专属 Host（形如 abc123.qweatherapi.com，只填域名即可）；老用户可留空。官方公告：公共地址 devapi/geoapi.qweather.com 自 2026 年起逐步停服，建议尽早填写。",
+    "description": "和风天气专属 API Host（可选）。2024 年后新注册的和风用户必须填写控制台分配的专属 Host（形如 abc123.qweatherapi.com，只填域名即可）；老用户可留空。官方公告：公共地址 devapi/geoapi.qweather.com 自 2026 年起逐步停服，建议尽早填写。和风 WebAPI v7 已弃用，本插件使用 v1 新接口（仅支持专属 Host），只填 Key 不填 Host 时将跳过和风数据源并在日志告警。",
     "default": ""
   },
   "default_city": {
     "type": "string",
     "description": "默认城市（可选），如：北京。发送 /天气 不带城市名时使用（AI 工具调用未指定城市时也会使用）。",
+    "default": ""
+  },
+  "image_card": {
+    "type": "bool",
+    "description": "渲染图片天气卡片",
+    "hint": "开启后 /天气 与 /预报 返回精美图片卡片（温度、AQI 徽章、逐日预报、预警横幅）；渲染失败或未配置渲染器时自动回退纯文本。",
+    "default": true
+  },
+  "interactive_choice": {
+    "type": "bool",
+    "description": "重名城市交互选择",
+    "hint": "查询到多个同名城市（如“朝阳”）时列出候选，等待回复序号选择；关闭后直接取第一个候选。",
+    "default": true
+  },
+  "push_time_default": {
+    "type": "string",
+    "description": "订阅推送默认时间",
+    "hint": "使用 /订阅 时未指定时间则使用该值，格式 HH:MM（24 小时制），如 07:30。",
+    "default": "07:30"
+  },
+  "timezone": {
+    "type": "string",
+    "description": "时区",
+    "hint": "订阅推送与“当前时间”所用的时区，如 Asia/Shanghai。留空则用服务器本地时区；服务器跑在 UTC 时（常见于 Docker）建议填 Asia/Shanghai，否则 /订阅 07:30 会在北京时间 15:30 推送。",
     "default": ""
   }
 }
